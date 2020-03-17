@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  consul_kv_job:
+    runs-on: ubuntu-latest
+    name: A job to test getting a value from Consul KV
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: get value
+        id: get
+        uses: ./
+        with:
+          url: demo.consul.io
+          key: mykey
+      # Use the environment variable set by the key
+      - name: prints the value of the key
+        run: echo "The value from Consul is ${{ env.mykey }}"
