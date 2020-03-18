@@ -1,10 +1,6 @@
 # consul-kv-github-action
 GitHub Action to lookup a key in Consul KV and set its value as an environment variable. 
 
-# Hello world docker action
-
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
 ## Inputs
 
 ### `url`
